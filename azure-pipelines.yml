@@ -61,6 +61,7 @@ steps:
     zipAfterPublish: true
 
 - task: NuGetCommand@2
+  displayName: 'Pack the project - $(buildConfiguration)'
   inputs:
     command: 'pack'
     packagesToPack: '**/*.csproj'
